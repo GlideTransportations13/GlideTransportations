@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Freight Logistics</title>
+</head>
+<body>
+    <h1>Freight Logistics Dashboard</h1>
+    
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <h2>Register Driver</h2>
+    <form id="driverForm">
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="text" name="address" placeholder="Address" required>
+        <input type="text" name="business_name" placeholder="Business Name" required>
+        <input type="text" name="driver_license" placeholder="Driver License" required>
+        <input type="text" name="insurance" placeholder="Insurance" required>
+        <input type="text" name="medical_card" placeholder="Medical Card" required>
+        <input type="text" name="usdot" placeholder="USDOT Number" required>
+        <input type="text" name="mc_number" placeholder="MC Number" required>
+        <input type="text" name="vin_truck" placeholder="Truck VIN" required>
+        <input type="text" name="vin_trailer" placeholder="Trailer VIN" required>
+        
+        <select name="membership_type" required>
+            <option value="local">Local - $250/month</option>
+            <option value="state">State - $500/month</option>
+            <option value="national">National - $1000/month</option>
+        </select>
+        
+        <button type="submit">Register Driver</button>
+    </form>
+
+    <h2>Upload Shipment</h2>
+    <form id="shipmentForm" enctype="multipart/form-data">
+        <input type="number" name="weight" placeholder="Weight" required>
+        <input type="text" name="size" placeholder="Size" required>
+        <input type="text" name="requirements" placeholder="Requirements" required>
+        <input type="text" name="pickup_location" placeholder="Pickup Location" required>
+        <input type="text" name="dropoff_location" placeholder="Dropoff Location" required>
+        <input type="text" name="load_details" placeholder="Load Details" required>
+        <input type="text" name="bol" placeholder="BOL" required>
+        <input type="file" name="pictures" multiple required>
+        
+        <button type="submit">Upload Shipment</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
